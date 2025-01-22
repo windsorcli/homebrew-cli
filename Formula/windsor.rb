@@ -10,7 +10,7 @@ class Windsor < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_darwin_amd64.tar.gz"
-      sha256 "cb93601522419f17db7d77006e9aa3b80a9725b77b9135ee5dae20c4409facac"
+      sha256 "7b3bf61042681689c6e807690a62950cec9dcac2362bf39ccca557f3fafa3d82"
 
       def install
         bin.install "windsor"
@@ -18,7 +18,7 @@ class Windsor < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_darwin_arm64.tar.gz"
-      sha256 "7cad5bcbe1f11c23112b6a15eb549df6e5043cb9199eff56afdffe4483d77a37"
+      sha256 "e8656237ea80db9b42808e3c2c7ab8cab36e6e435719823e5967c99079d129a9"
 
       def install
         bin.install "windsor"
@@ -30,7 +30,7 @@ class Windsor < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_linux_amd64.tar.gz"
-        sha256 "f3d4afa74ae15ed53f45225dacd2e37fb7fb4617c9b62b01f9480688ba8ba9bf"
+        sha256 "cf1247685764827a4f11e7cf0a5e4d03bbbf319e90d8268f4eae486877b05437"
 
         def install
           bin.install "windsor"
@@ -40,7 +40,7 @@ class Windsor < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_linux_arm64.tar.gz"
-        sha256 "853db07559de0d1ebe21057bdd072895b64bfb28d0b05c4c83f5cea7cc437929"
+        sha256 "ef4c0b1981dbb3bcf588e38452cf9522b35aefcf179f1be51e78858d2eea6d5a"
 
         def install
           bin.install "windsor"
