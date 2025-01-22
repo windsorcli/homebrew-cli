@@ -5,20 +5,20 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.3.0/windsor_0.3.0_darwin_amd64.tar.gz"
-      sha256 "3353090092416689445777739d07b1442b04022a9803bde4759f4995714dfa66"
+      url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_darwin_amd64.tar.gz"
+      sha256 "cb93601522419f17db7d77006e9aa3b80a9725b77b9135ee5dae20c4409facac"
 
       def install
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.3.0/windsor_0.3.0_darwin_arm64.tar.gz"
-      sha256 "cd53d13aced0e3d981c557133365df442fa4aca2a1d89d82a364f76d56d79245"
+      url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_darwin_arm64.tar.gz"
+      sha256 "7cad5bcbe1f11c23112b6a15eb549df6e5043cb9199eff56afdffe4483d77a37"
 
       def install
         bin.install "windsor"
@@ -29,8 +29,8 @@ class Windsor < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/windsorcli/cli/releases/download/v0.3.0/windsor_0.3.0_linux_amd64.tar.gz"
-        sha256 "b6add2f0937fa02b327ea77f6e45d2552dfa567b19a3aa78966b018533cbd03d"
+        url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_linux_amd64.tar.gz"
+        sha256 "f3d4afa74ae15ed53f45225dacd2e37fb7fb4617c9b62b01f9480688ba8ba9bf"
 
         def install
           bin.install "windsor"
@@ -39,8 +39,8 @@ class Windsor < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/windsorcli/cli/releases/download/v0.3.0/windsor_0.3.0_linux_arm64.tar.gz"
-        sha256 "791e662ae2644294058ca98c8e74bf13d27d68018fc343a6248bd851b74bbf35"
+        url "https://github.com/windsorcli/cli/releases/download/v0.3.1/windsor_0.3.1_linux_arm64.tar.gz"
+        sha256 "853db07559de0d1ebe21057bdd072895b64bfb28d0b05c4c83f5cea7cc437929"
 
         def install
           bin.install "windsor"
