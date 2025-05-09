@@ -5,20 +5,20 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.5.7-RC1"
+  version "0.5.7-RC2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC1/windsor_0.5.7-RC1_darwin_amd64.tar.gz"
-      sha256 "761d4e52fc863b6381f3c93e3dac9268d3ec749745d6eae3de577a07ad808e8b"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC2/windsor_0.5.7-RC2_darwin_amd64.tar.gz"
+      sha256 "adfaea86831c04506b03946d786ac8f81a27e60f6e2ad1333c1c250b319a99a1"
 
       def install
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC1/windsor_0.5.7-RC1_darwin_arm64.tar.gz"
-      sha256 "9f13827db8e84bfa9a3c6ac8fb0ebc62a1445d6ef345529d0c83c9fbcffd5b77"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC2/windsor_0.5.7-RC2_darwin_arm64.tar.gz"
+      sha256 "9a420c4e9d5c2c0c08d24e026921ea5c3e3b927681a2617910b38f35e91f45ed"
 
       def install
         bin.install "windsor"
@@ -28,15 +28,15 @@ class Windsor < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC1/windsor_0.5.7-RC1_linux_amd64.tar.gz"
-      sha256 "1e21e3b3266fb9104acc42feea4c7c32d673757562de1f0a3de83d76d8448da1"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC2/windsor_0.5.7-RC2_linux_amd64.tar.gz"
+      sha256 "b0d1eac87b72d05eb29b51c527c9690305230cbed3f2f5c2c6d40be9a215aa6e"
       def install
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC1/windsor_0.5.7-RC1_linux_arm64.tar.gz"
-      sha256 "41e5d32e4d8ed55f7ecfedfa75d51feba1647c93eb667b31f37b7597488033ed"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7-RC2/windsor_0.5.7-RC2_linux_arm64.tar.gz"
+      sha256 "5535b4b71e989a1b711510249d33226ad6fcca4786b03207d2d8d1eeb7c13fe4"
       def install
         bin.install "windsor"
       end
