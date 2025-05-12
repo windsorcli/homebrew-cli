@@ -5,46 +5,69 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.5.6"
+  version "0.5.7"
+  license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.6/windsor_0.5.6_darwin_amd64.tar.gz"
-      sha256 "67f4bb7152d382fe2b102c2521ddc56c636a2348d8fff846c0f87cb6ebfb3c33"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_darwin_amd64.tar.gz"
+      sha256 "5dbad2cee73c72796d8dadbc1432d75cec312fe56f6d733547dc2adac60cb92a"
 
       def install
         bin.install "windsor"
+        # Install shell completions
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
+        (bash_completion/"windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
+        (zsh_completion/"_windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
+        (fish_completion/"windsor.fish").write output
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.6/windsor_0.5.6_darwin_arm64.tar.gz"
-      sha256 "dd8ce53525d6c949c9c3ef72a8a93e01ede6ab736741774669a77ebb399ac7bc"
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_darwin_arm64.tar.gz"
+      sha256 "71f964485d4c54fb8cb96e7b9c930fd750352fd8f1cc6087097967d41bb65f09"
 
       def install
         bin.install "windsor"
+        # Install shell completions
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
+        (bash_completion/"windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
+        (zsh_completion/"_windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
+        (fish_completion/"windsor.fish").write output
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/windsorcli/cli/releases/download/v0.5.6/windsor_0.5.6_linux_amd64.tar.gz"
-        sha256 "c097c673fd64540475a1a37e74c77b3e2c6ea173cf8522897474519759ec76ec"
-
-        def install
-          bin.install "windsor"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_linux_amd64.tar.gz"
+      sha256 "ac1b7ae825d623b1e06c6245d3ba9331105d2aeeff781744dc32eae476204c04"
+      def install
+        bin.install "windsor"
+        # Install shell completions
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
+        (bash_completion/"windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
+        (zsh_completion/"_windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
+        (fish_completion/"windsor.fish").write output
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/windsorcli/cli/releases/download/v0.5.6/windsor_0.5.6_linux_arm64.tar.gz"
-        sha256 "ecc901678d29394464dcea3c54d55f9923d4129595cd34f365b0b7b6716da7fe"
-
-        def install
-          bin.install "windsor"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_linux_arm64.tar.gz"
+      sha256 "c20c992779926f342889fb65f57256ef033181e50b6fa20434b22fddec4feacc"
+      def install
+        bin.install "windsor"
+        # Install shell completions
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
+        (bash_completion/"windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
+        (zsh_completion/"_windsor").write output
+        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
+        (fish_completion/"windsor.fish").write output
       end
     end
   end
