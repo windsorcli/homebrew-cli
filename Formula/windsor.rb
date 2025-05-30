@@ -5,69 +5,41 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.5.7"
+  version "0.6.0"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_darwin_amd64.tar.gz"
-      sha256 "5dbad2cee73c72796d8dadbc1432d75cec312fe56f6d733547dc2adac60cb92a"
+      url "https://github.com/windsorcli/cli/releases/download/v0.6.0/windsor_0.6.0_darwin_amd64.tar.gz"
+      sha256 "2d591fa809cee7344e75619ff652aafe685812d5f8e9e5784e54e11a78c53099"
 
       def install
         bin.install "windsor"
-        # Install shell completions
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
-        (bash_completion/"windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
-        (zsh_completion/"_windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
-        (fish_completion/"windsor.fish").write output
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_darwin_arm64.tar.gz"
-      sha256 "71f964485d4c54fb8cb96e7b9c930fd750352fd8f1cc6087097967d41bb65f09"
+      url "https://github.com/windsorcli/cli/releases/download/v0.6.0/windsor_0.6.0_darwin_arm64.tar.gz"
+      sha256 "cd72d3ab8c7ae63bae3774800c8ff7dcb4207a044ed4d43f04cfed537dac45d1"
 
       def install
         bin.install "windsor"
-        # Install shell completions
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
-        (bash_completion/"windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
-        (zsh_completion/"_windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
-        (fish_completion/"windsor.fish").write output
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_linux_amd64.tar.gz"
-      sha256 "ac1b7ae825d623b1e06c6245d3ba9331105d2aeeff781744dc32eae476204c04"
+      url "https://github.com/windsorcli/cli/releases/download/v0.6.0/windsor_0.6.0_linux_amd64.tar.gz"
+      sha256 "688a32b5ece0c53cd9aaf341b3ef0d1f292913f0053ea76f267feaa4fc10c137"
       def install
         bin.install "windsor"
-        # Install shell completions
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
-        (bash_completion/"windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
-        (zsh_completion/"_windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
-        (fish_completion/"windsor.fish").write output
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.5.7/windsor_0.5.7_linux_arm64.tar.gz"
-      sha256 "c20c992779926f342889fb65f57256ef033181e50b6fa20434b22fddec4feacc"
+      url "https://github.com/windsorcli/cli/releases/download/v0.6.0/windsor_0.6.0_linux_arm64.tar.gz"
+      sha256 "c8fb456749de33bd5e84ac24dd753a95b79aed540cf5241a9180a9b3b29f0dba"
       def install
         bin.install "windsor"
-        # Install shell completions
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "bash")
-        (bash_completion/"windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "zsh")
-        (zsh_completion/"_windsor").write output
-        output = Utils.safe_popen_read("#{bin}/windsor", "completion", "fish")
-        (fish_completion/"windsor.fish").write output
       end
     end
   end
