@@ -5,21 +5,21 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.8.0"
+  version "0.8.1"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.8.0/windsor_0.8.0_darwin_amd64.tar.gz"
-      sha256 "547ce60e65d116dd81a2237ba9502e9165c1466a5bd5b6a8518b8e0ac09b661e"
+      url "https://github.com/windsorcli/cli/releases/download/v0.8.1/windsor_0.8.1_darwin_amd64.tar.gz"
+      sha256 "be8e22141f8ee70a7e73d6f503ec408e11acefc375dbd101ca44d3faeb43398a"
 
       def install
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.8.0/windsor_0.8.0_darwin_arm64.tar.gz"
-      sha256 "4fa0baafa8592cb2a49e7edd2969b52e010147521caf555b794510e12dbb0313"
+      url "https://github.com/windsorcli/cli/releases/download/v0.8.1/windsor_0.8.1_darwin_arm64.tar.gz"
+      sha256 "ccc1bd95a78f81aa24891069ed5259998be62b85587a77d1795a082cdb2071e0"
 
       def install
         bin.install "windsor"
@@ -29,15 +29,15 @@ class Windsor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.8.0/windsor_0.8.0_linux_amd64.tar.gz"
-      sha256 "a96575e34bb41fbff5c231cee752b65654511e520ed6db4e312b1a409b7ff05b"
+      url "https://github.com/windsorcli/cli/releases/download/v0.8.1/windsor_0.8.1_linux_amd64.tar.gz"
+      sha256 "0db07e24dbd11c5d3a2c12c0c6337e84ab2d3b1a14236e67333c46d25bb61653"
       def install
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.8.0/windsor_0.8.0_linux_arm64.tar.gz"
-      sha256 "2ac406803eb032c673c5e596da4cf04d998a534cafe4e629ff12e904d5e62675"
+      url "https://github.com/windsorcli/cli/releases/download/v0.8.1/windsor_0.8.1_linux_arm64.tar.gz"
+      sha256 "a60bb4f727ef2e30c3eb829574419385edfd7e1f0f5a1b0a3ee6d29f4d6fc348"
       def install
         bin.install "windsor"
       end
