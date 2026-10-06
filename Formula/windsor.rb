@@ -5,21 +5,21 @@
 class Windsor < Formula
   desc "The Windsor Command Line Interface"
   homepage "https://windsorcli.github.io"
-  version "0.9.0"
+  version "0.9.1"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/windsorcli/cli/releases/download/v0.9.0/windsor_0.9.0_darwin_amd64.tar.gz"
-      sha256 "25fc81dd78ab6660c8f67b9c1c0e0104e0e39384d0c3a1b3b7bdf27116893395"
+      url "https://github.com/windsorcli/cli/releases/download/v0.9.1/windsor_0.9.1_darwin_amd64.tar.gz"
+      sha256 "809a0b2453ddddfb8baec65dac465ba911e286c03c575119171d102ab9772899"
 
       define_method(:install) do
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/windsorcli/cli/releases/download/v0.9.0/windsor_0.9.0_darwin_arm64.tar.gz"
-      sha256 "b444d8de858730131aa83c215f4707ec41c14ecf55add608db9867c7fdba3e13"
+      url "https://github.com/windsorcli/cli/releases/download/v0.9.1/windsor_0.9.1_darwin_arm64.tar.gz"
+      sha256 "0bfadd75a2a2976399a58e4a139a856c9cd5dd2df9278915a0c3627cd64af59c"
 
       define_method(:install) do
         bin.install "windsor"
@@ -29,15 +29,15 @@ class Windsor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.9.0/windsor_0.9.0_linux_amd64.tar.gz"
-      sha256 "ffd74348f8c78d9c861289e5a98085d035bc8d64266e98f82d2c7fcb65824d34"
+      url "https://github.com/windsorcli/cli/releases/download/v0.9.1/windsor_0.9.1_linux_amd64.tar.gz"
+      sha256 "264adbd623afe59d8c2a48a6f85b5d6c0314b7b9aee1dd09d2102a9c61cf734c"
       define_method(:install) do
         bin.install "windsor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/windsorcli/cli/releases/download/v0.9.0/windsor_0.9.0_linux_arm64.tar.gz"
-      sha256 "8aff91d1d5c1a72c3ce99fdf886312a3f522e77bdcbc7814113ead90d6576cdb"
+      url "https://github.com/windsorcli/cli/releases/download/v0.9.1/windsor_0.9.1_linux_arm64.tar.gz"
+      sha256 "cf7264d81158360c11346c66dde4eb5fbb77eb5cc96e8d5368ef1f66ba451147"
       define_method(:install) do
         bin.install "windsor"
       end
